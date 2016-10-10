@@ -85,4 +85,8 @@ object Dependencies {
     "org.webjars" % "momentjs" % s"$momentJsVersion" / s"$momentJsVersion/min/moment-with-locales.js" minified s"$momentJsVersion/min/moment-with-locales.min.js",
     "org.webjars" % "Eonasdan-bootstrap-datetimepicker" % bootstrapDatepickerVersion / s"$bootstrapDatepickerVersion/js/bootstrap-datetimepicker.js" minified s"$bootstrapDatepickerVersion/js/bootstrap-datetimepicker.min.js" dependsOn "bootstrap.js" dependsOn "moment-with-locales.js"
   ))
+
+  val chartsFrontendDeps = Def.setting(Seq(
+    "io.udash" %%% "udash-jquery" % jqueryWrapperVersion
+  ))
 }
